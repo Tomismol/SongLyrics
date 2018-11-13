@@ -23,7 +23,7 @@ export class EditSongPage {
   }
 
   ionViewWillLoad() {
-    this.song = this.navParams.get('songs');
+    this.song = this.navParams.get('song');
   }
 
   saveSong(song: Song) {

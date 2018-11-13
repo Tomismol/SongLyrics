@@ -23,9 +23,7 @@
     <ion-item>
       <ion-label>Show Songs From Band</ion-label>
       <ion-select (ionChange)="onContextChange($event)" [(ngModel)]="band" multiple="false" cancelText="cancel" okText="Show songs from selected">
-        <ion-option *ngFor="let band of bandsList$ | async"
-        
-        detail-push>{{band.name}}</ion-option>
+        <ion-option *ngFor="let band of bandsList$ | async" detail-push>{{band.name}}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
@@ -33,9 +31,8 @@
   <ion-list>
     <ion-list-header>Songs:</ion-list-header>
 
-    <ion-item *ngFor="let item of songsList$ |async"
-    detail-push navPush="ViewSongPage" [navParams]="{song:song}">
-      {{item.title}}
+    <ion-item *ngFor="let song of songsList$ |async" detail-push navPush="ViewSongPage" [navParams]="{song:song}">
+      {{song.title}}
     </ion-item>
   </ion-list>
 

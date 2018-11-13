@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AddSongPage } from './add-song';
+import { SongsService } from '../../services/songs.services';
 
 @NgModule({
   declarations: [
@@ -9,5 +10,6 @@ import { AddSongPage } from './add-song';
   imports: [
     IonicPageModule.forChild(AddSongPage),
   ],
+  providers: [ SongsService ],
 })
 export class AddSongPageModule {}

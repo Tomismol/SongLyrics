@@ -8,7 +8,8 @@ import { rootRenderNodes } from '@angular/core/src/view';
 
 
 @Component({
-  templateUrl: '<ion-nav #myNav [root]="rootPage"></ion-nav>'
+  template: '<ion-nav #myNav [root]="rootPage"></ion-nav>'
+  //'<ion-nav #myNav [root]="rootPage"></ion-nav>'
 })
 
 export class MyApp {

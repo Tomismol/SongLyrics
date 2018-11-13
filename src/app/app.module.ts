@@ -17,6 +17,8 @@ import { LoginPage } from '../pages/login/login';
 
 import { EmailComposer } from '@ionic-native/email-composer';
 
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 @NgModule({
   declarations: [
     MyApp
@@ -28,6 +30,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
