@@ -1,17 +1,13 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SongsService } from '../../services/songs.services';
 import { Observable } from 'rxjs/Observable';
 import { Song } from '../../models/song.model';
 import { Band } from '../../models/band.model';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -44,6 +40,7 @@ export class HomePage {
     });
   }
 
+  //method for showing song only from spesific band
   onContextChange(ctxt: string): void {
     this.songsList$ = this.songsServices.assembleBandFilteredList(ctxt).snapshotChanges().map(changes => {
       return changes.map(c => ({
@@ -52,6 +49,7 @@ export class HomePage {
     });
   }
 
+  //method for showing all songs 
   showAllSongs() {
     this.songsList$ = this.songsServices.getSongsList().snapshotChanges().map(changes => {
       return changes.map(c => ({

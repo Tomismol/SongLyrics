@@ -1,3 +1,5 @@
+//Tom Smolarek 1801495
+//all important imports for the App
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -12,12 +14,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
 
 import { EmailComposer } from '@ionic-native/email-composer';
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +40,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     AngularFireAuth,
-    EmailComposer
+    EmailComposer,
   ]
 })
-export class AppModule {}
+export class AppModule { }

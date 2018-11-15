@@ -1,3 +1,5 @@
+//Tom Smolarek 1801495
+//copyed from firebase to make the connection to my firebase project
 export const FIREBASE_CONFIG = {
     apiKey: "AIzaSyALTzQNSuCUTP-H0KkGcfdji5oBYmeIFcE",
     authDomain: "songlyrics-373e6.firebaseapp.com",

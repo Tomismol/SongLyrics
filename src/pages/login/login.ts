@@ -1,13 +1,9 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -26,14 +22,17 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
+  //method to link the new user to the RegisterPage
   register(email, password) {
     this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
       this.navCtrl.setRoot('RegisterPage', { email });
     });
   }
+
+  //method to link the user to the MenuPage
   login(email, password) {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email,password).then((res) =>{
-      this.navCtrl.setRoot('HomePage', {email});
+      this.navCtrl.setRoot('MenuPage', {email});
     });
   }
 }

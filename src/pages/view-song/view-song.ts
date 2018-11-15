@@ -1,13 +1,9 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Song } from '../../models/song.model';
 
-/**
- * Generated class for the ViewSongPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

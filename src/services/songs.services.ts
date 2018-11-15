@@ -1,3 +1,5 @@
+//Tom Smolarek 1801495
+
 import{ Injectable, ReflectiveInjector } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Song } from './../models/song.model';
@@ -12,6 +14,7 @@ export class SongsService {
 
     constructor(private db: AngularFireDatabase) {}
 
+    //collection of methods which are used in other pages
     getSongsList() {
         return this.songListRef;
     }
@@ -27,15 +30,19 @@ export class SongsService {
     addSong(song: Song) {
         return this.songListRef.push(song);
     }
+
     addBand(band: Band) {
         return this.bandListRef.push(band);
     }
+
     getBandList() {
         return this.bandListRef;
     }
+
     editSong(song: Song) {
         return this.songListRef.update(song.key, song);
     }
+    
     removeSong(song: Song) {
         return this.songListRef.remove(song.key);
     }

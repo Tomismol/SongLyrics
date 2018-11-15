@@ -1,3 +1,5 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
  
@@ -14,7 +16,6 @@ export class TabsPage {
   myIndex: number;
  
   constructor(navParams: NavParams) {
-    // Set the active tab based on the passed index from menu.ts
     this.myIndex = navParams.data.tabIndex || 0;
   }
 }

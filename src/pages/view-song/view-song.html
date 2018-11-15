@@ -1,24 +1,20 @@
-<!--
-  Generated template for the ViewSongPage page.
+<!--Tom Smolarek 1801495-->
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
-
+<!--title with spesific song title-->
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{song?.title}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+
 <ion-content padding>
+  <!--button links the user to the EditSongPage-->
   <ion-buttons>
     <button ion-button detail-push navPush= "EditSongPage" [navParams]="{song: song}">Edit song
     </button>
   </ion-buttons>
+  <!--shows chords and lyrics of the specific song-->
   <ion-item class="chords">
     <ion-textarea readonly [(ngModel)]="song.chords"></ion-textarea>
   </ion-item>

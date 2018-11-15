@@ -1,14 +1,9 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Song } from '../../models/song.model';
 import { SongsService } from '../../services/songs.services';
-
-/**
- * Generated class for the AddSongPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -32,6 +27,7 @@ export class AddSongPage {
     console.log('ionViewDidLoad AddSongPage');
   }
 
+  //method for saving the inputs
   addSong(song: Song) {
     this.songs.addSong(song).then(ref => {
       this.navCtrl.setRoot('HomePage', {key: ref.key});

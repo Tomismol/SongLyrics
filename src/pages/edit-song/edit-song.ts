@@ -1,14 +1,10 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SongsService } from '../../services/songs.services';
 import { Song } from '../../models/song.model';
 
-/**
- * Generated class for the EditSongPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -25,13 +21,13 @@ export class EditSongPage {
   ionViewWillLoad() {
     this.song = this.navParams.get('song');
   }
-
+//method for saving the inputs
   saveSong(song: Song) {
     this.songs.editSong(song).then(() =>{
     this.navCtrl.setRoot('HomePage');
   });
   }
-
+//method for deleting the inputs
   deleteSong(song: Song) {
     this.songs.removeSong(song).then(() =>{
       this.navCtrl.setRoot('HomePage');

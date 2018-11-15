@@ -1,15 +1,10 @@
+//Tom Smolarek 1801495
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Band } from '../../models/band.model';
 import { SongsService } from '../../services/songs.services';
 
-
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -30,6 +25,7 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
+  //method to save the new band
   addBand(band: Band){
     this.regBand.addBand(band).then(ref => {
       this.navCtrl.setRoot('HomePage', {key: ref.key});
